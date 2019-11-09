@@ -1,0 +1,20 @@
+/** this is a comment line in the sample program **/
+ INT f2(INT x, INT y ) 
+ BEGIN 
+    INT z;
+    z := 10;
+    WHILE (z > 0)
+        z := z % 2;
+    RETURN z; 
+ END 
+ INT MAIN f1() 
+ BEGIN
+    INT x;
+    READ(x, "A41.input");
+    INT y;
+    READ(y, "A42.input");
+    INT z;
+    z := f2(x,y) + f2(y,x);
+    FOR x := 10; DOWNTO 5 DO y := x;
+    WRITE (z, "A4.output"); 
+ END
