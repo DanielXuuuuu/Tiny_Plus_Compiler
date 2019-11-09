@@ -1,5 +1,4 @@
 // 词法分析器：得到token序列
-// TODO:词法错误检查
 
 #include "util.h"
 #include "lexer.h"
@@ -224,7 +223,6 @@ TokenType getToken(void) {
 			break;
 		case STATUS_NUMBER:
 			if (!isdigit(c)) {
-				// 取到字符发现不是数字，判断是不是小数点,是小数点，进入STATUS_REAL状态，否则结束
 				if (c == '.') {
 					currentStatus = STATUS_REAL;
 				}
